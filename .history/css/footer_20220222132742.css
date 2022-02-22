@@ -1,0 +1,55 @@
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+}
+
+.footer .box-container .box h3{
+    padding:.5rem 0;
+    font-size: 2.5rem;
+    color: black;
+}
+
+.footer .box-container .box a{
+    display: block;
+    padding:.5rem 0;
+    font-size: 1.5rem;
+    color: darkblue;
+}
+
+.footer .box-container .box a:hover{
+    color: green;
+    text-decoration: underline;
+}
+
+.footer .credit{
+    text-align: center;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    font-size: 2rem;
+    color: black;
+    padding:.5rem;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.footer .credit span{
+    color: green;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 300px;
+    width: 300px;
+}
+
+.gmap_canvas { overflow: hidden;
+    background: none!important;
+    height: 300px;
+    width:300px;
+}
+
+iframe {
+    width: 300px;
+    height: 300px;
+}
