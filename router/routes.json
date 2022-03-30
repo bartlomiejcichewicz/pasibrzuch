@@ -1,0 +1,8 @@
+{
+  "/": "home",
+  "/koszyk": "basket",
+  "/dodaj-do-koszyka/{id}": "addToBasket",
+  "/zloz-zamowienie": "makeOrder",
+  "not_found": "notFound",
+  "ignore": "pasibrzuch/"
+}

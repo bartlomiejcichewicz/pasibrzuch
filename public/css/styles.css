@@ -15,6 +15,10 @@
     outline: none; border:none;
     transition: all .2s linear;
 }
+/*@todo dirty hack żeby poprawić menu*/
+body {
+    padding-top: 50px;
+}
 
 html{
     font-size: 62.5%;
