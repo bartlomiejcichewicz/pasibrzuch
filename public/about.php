@@ -1,7 +1,6 @@
 <section class="about" id="about">
 
-    <h3 class="sub-heading">o nas</h3>
-    <h1 class="heading">Catering Pasibrzuch</h1>
+    <h1 class="heading">O nas</h1>
 
     <div class="row">
 

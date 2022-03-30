@@ -9,6 +9,6 @@
     <link rel="stylesheet" href="<?=CSS_URI?>menu.css">
     <link rel="stylesheet" href="<?=CSS_URI?>footer.css">
     <link rel="stylesheet" href="<?=CSS_URI?>styles.css">
-    <link rel="stylesheet" href="<?=CSS_URI?>styles.css">
+    <link rel="stylesheet" href="<?=CSS_URI?>basket.css">
     <script type="text/javascript" src="<?=JS_URI?>jquery-3.6.0.min.js"></script>
 </head>

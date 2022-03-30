@@ -25,7 +25,6 @@ class Db_Connection
 
     public function Query($qry)
     {
-        $qry = htmlspecialchars($qry);
         $this->lastQuery = $qry;
         $this->lastResult = $this->conn->query($qry);
         $this->error = $this->conn->error;

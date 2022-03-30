@@ -1,0 +1,31 @@
+.basket {
+    position: relative;
+    text-align: center;
+    padding-top: 5rem;
+    font-size: 1.5rem;
+}
+.basket-form {
+    padding-top: 2rem;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.submit-button {
+    background-color:midnightblue   !important;
+    color: white;
+    font-size: 2rem !important;
+    text-decoration: solid;
+    border: 2px solid black ;
+    margin-left: 1rem;
+    padding: 3px;
+}
+
+.form-input {
+    background-color:lightgoldenrodyellow;
+}
+
+.basket-label {
+    margin-left:1rem;
+    margin-right:0.3rem;
+}

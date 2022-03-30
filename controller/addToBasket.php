@@ -32,6 +32,7 @@ class AddToBasket implements Controller
             <h1 class="heading">Pomyślnie dodano do koszyka. W przypadku zwiększenia ilości, odwiedź koszyk :)</h1>
             </section>
         ';
+        echo $_DB->lastQuery;
         $View = new AddToBasketView();
         if ($this->BasketId) {
             $this->changeBasketAmount("`amount` + 1");

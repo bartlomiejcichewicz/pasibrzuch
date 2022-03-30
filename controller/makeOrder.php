@@ -24,14 +24,14 @@ class MakeOrder implements Controller
             $View->Render(["msg"=>$Message]);
             return;
         }
-        $_DB->Query("UPDATE klienci 
-                            SET address = {$_POST['clientAddress']}
-                              , email = {$_POST['clientEmail']}
-                              , name = {$_POST['clientName']}
-                              , last_name = {$_POST['clientLastName']}
-                              , telephone = {$_POST['clientTelNumber']}
+        $_DB->Query("UPDATE klienci
+                            SET address = '{$_POST['clientAddress']}'
+                              , email = '{$_POST['clientEmail']}'
+                              , name = '{$_POST['clientName']}'
+                              , last_name = '{$_POST['clientLastName']}'
+                              , telephone = '{$_POST['clientTelNumber']}'
                               , ordered = 1
-                              WHERE klienci_id = {$_SESSION['client_id']}
+                              WHERE klienci_id = '{$_SESSION['client_id']}'
                               "
         );
         $Values = "";
@@ -43,12 +43,20 @@ class MakeOrder implements Controller
         $Values = rtrim($Values, ",");
         if(!empty($Values)) {
             $Qry = "INSERT INTO zamowienia_2_klienci (koszyk_id, klienci_id, zamowienia_id) VALUES $Values";
+            echo $_DB->lastQuery;
             $_DB->Query($Qry);
             if(empty($_DB->error)) {
                 unset($_SESSION["BasketIds"]);
-                $Message = "Zamówienie zostało złożone :). Twój numer zamówienia to: $OrderId";
+                $Message = "<section class='about' id='about'>
+                <h3 class='sub-heading'>Zamówienie zostało złożone.</h3>
+                <h1 class='heading'>Twój numer zamówienia to: $OrderId</h1>
+                </section>";
             } else {
-                $Message = "Zamówienie nie zostało zostało złożone :/. Spróbuj ponownie za chwilę.";
+                $Message = "<section class='about' id='about'>
+                <h3 class='sub-heading'>Zamówienie nie zostało złożone.</h3>
+                <h1 class='heading'>Spróbuj ponownie za chwilę.</h1>
+                </section>";
+                "Zamówienie nie zostało zostało złożone :/. Spróbuj ponownie za chwilę.";
             }
         } else {
             $Message = "Coś poszło nie tak przy pobieraniu danych z koszyka...";

@@ -30,9 +30,9 @@
         <div class="box">
             <h3>Nawigacja</h3>
             <a href="#">O Nas</a>
-            <a href="<?=$_SERVER["REQUEST_URI"] == "/pasibrzuch/" ? "#appetizers" : ROOT_URI."#appetizers"?>"">Przystawki</a>
+            <a href="<?=$_SERVER["REQUEST_URI"] == "/pasibrzuch/" ? "#przystawki" : ROOT_URI."#przystawki"?>"">Przystawki</a>
             <a href="<?=$_SERVER["REQUEST_URI"] == "/pasibrzuch/" ? "#dania główne" : ROOT_URI."#DANIA GŁÓWNE"?>"">Dania Główne</a>
-            <a href="<?=$_SERVER["REQUEST_URI"] == "/pasibrzuch/" ? "#NAPOJE" : ROOT_URI."#NAPOJE"?>"">Napoje</a>
+            <a href="<?=$_SERVER["REQUEST_URI"] == "/pasibrzuch/" ? "#napoje" : ROOT_URI."#NAPOJE"?>"">Napoje</a>
             <a href="<?=$_SERVER["REQUEST_URI"] == "/pasibrzuch/" ? "#contact" : ROOT_URI."#contact"?>">Kontakt</a>
         </div>
     </div>

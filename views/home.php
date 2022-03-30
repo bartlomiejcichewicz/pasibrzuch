@@ -6,8 +6,6 @@ class HomeView extends View
     {
         foreach ($Data as $category => $dishes) {
         echo '<section class="menu">
-        
-            <h3 class="sub-heading">menu</h3>
             <h1 class="heading" id="'.$category.'">' . $category . '</h1>
             <div class="box-container">
         ';
@@ -25,8 +23,25 @@ class HomeView extends View
                 </div>';
                     }
                     echo '    </div>
-        
+
         </section>';
         }
+    }
+    public function Render($Data)
+    {
+        require_once("./bootstrap.php");
+        require_once("./public/head.php");
+        ?>
+        <body>
+        <?php
+         require_once("./public/about.php");
+        echo $this->CustomJavascript();
+        require_once("./public/menu.php");
+        echo $this->GetContent($Data);
+        require_once("./public/footer.php");
+        ?>
+        </body>
+        <?php
+
     }
 }
